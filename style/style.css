@@ -1,0 +1,64 @@
+.colorWhite {
+  color: #fefefe;
+}
+
+.bcolorSecondary {
+  background-color: #272f9f;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.card-footer {
+  background-color: rgba(39, 47, 159, 0.168627451);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+html body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+html body .HeaderButton {
+  font-size: 1.25rem;
+}
+html body a {
+  text-decoration: none;
+}
+html body nav {
+  background-color: white;
+}
+html body nav .navbar-brand {
+  width: 5rem;
+}
+html body header {
+  background-image: url(../assets/header.webp);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+html body header .header-wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  height: 10rem;
+}
+html body .sub-header {
+  background-color: #272f9f;
+  color: #fefefe;
+  font-weight: 600;
+}
+html body .card-title {
+  text-decoration: underline;
+  text-decoration-color: #272f9f;
+}/*# sourceMappingURL=style.css.map */

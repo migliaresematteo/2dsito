@@ -1,0 +1,66 @@
+$main-clr: #261785;
+$secondary-clr: #272f9f;
+$white: #fefefe;
+$grey: #dedede;
+$black: #191919;
+
+.colorWhite {
+    color: $white;
+}
+.bcolorSecondary {
+    background-color: $secondary-clr;
+}
+.w-max {
+    width: max-content;
+}
+.card-footer {
+    background-color: #272f9f2b;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+    body {
+        font-family: "Montserrat", sans-serif;
+        .HeaderButton {
+            font-size: 1.25rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        min-height: 100vh;
+        nav {
+            background-color: white;
+            .navbar-brand {
+                width: 5rem;
+            }
+        }
+        header {
+            background-image: url(../assets/header.webp);
+            background-size: cover;
+            min-height: 100vh;
+            position: relative;
+            .header-wave {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                z-index: 2;
+                height: 10rem;
+            }
+        }
+        .sub-header {
+            background-color: $secondary-clr;
+            color: $white;
+            font-weight: 600;
+        }
+        .card-title {
+            text-decoration: underline;
+            text-decoration-color: $secondary-clr;
+        }
+    }
+}
