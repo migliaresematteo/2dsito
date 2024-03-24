@@ -676,41 +676,52 @@
                 ];
                 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 
-                // Seleziona l'elemento del DOM dove inserire i componenti
-                let carListContainer = document.getElementById("carList");
-                let count = 0;
+                // Function to filter cars based on price range
+    function filterCars() {
+        let priceRangeInput = document.getElementById("priceRange").value;
+        let [minPrice, maxPrice] = priceRangeInput.split("-").map(Number);
 
-                // Itera su ciascun oggetto nell'array e crea dinamicamente il markup HTML
-                cars.forEach(function(car) {
-                    let carHtml = `
-                        <div class="row flex-lg-row-reverse align-items-center">
-                            <div class="col-lg-7">
-                                <div class="lc-block">
-                                    <img loading="lazy" class="img-fluid" src="${car.imageSrc}" width="900" height="600" alt="CarImage">
+        let filteredCars = cars.filter(car => car.price >= minPrice && car.price <= maxPrice);
+        displayCars(filteredCars);
+    }
+
+    // Function to display cars
+    function displayCars(cars) {
+        let carListContainer = document.getElementById("carList");
+        carListContainer.innerHTML = ""; // Clear previous content
+
+        cars.forEach(function(car) {
+            let carHtml = `
+                <div class="row flex-lg-row-reverse align-items-center">
+                    <div class="col-lg-7">
+                        <div class="lc-block">
+                            <img loading="lazy" class="img-fluid" src="${car.imageSrc}" width="900" height="600" alt="CarImage">
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="lc-block">
+                            <div>
+                                <h1><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
+                                <h6>${car.description}</h6>
+                                <p class="lead m-0"><span class="badge bg-success">${car.price} € / mese</span></p><sub class="text-black-50"> IVA Inclusa</sub>
+                                <p class="fst-italic my-3">Dettagli della miglior offerta disponibile:</p>
+                                <p class="lead"><span class="badge bg-success"><i class="fa-solid fa-clock"></i> 60 Mesi</span><br><span class="badge bg-success"><i class="fa-solid fa-road"></i> 20.000 chilometri annui</span></p>
+                                <div class="d-flex">
+                                    <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp"></i> Finalizza</a>
+                                    <a target="_blank" href="${car.pdfLink}" class="bcolorSecondary px-4 py-2 ms-1 colorWhite border-0 rounded-2"><i class="fa-solid fa-file"></i></a>
                                 </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="lc-block">
-                                    <div>
-                                        <h1><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
-                                        <h6>${car.description}</h6>
-                                        <p class="lead m-0"><span class="badge bg-success">${car.price} € / mese</span></p><sub class="text-black-50"> IVA Inclusa</sub>
-                                        <p class="fst-italic my-3">Dettagli della miglior offerta disponibile:</p>
-                                        <p class="lead"><span class="badge bg-success"><i class="fa-solid fa-clock"></i> 60 Mesi</span><br><span class="badge bg-success"><i class="fa-solid fa-road"></i> 20.000 chilometri annui</span></p>
-                                        <div class="d-flex">
-                                            <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp"></i> Finalizza</a>
-                                            <a target="_blank" href="${car.pdfLink}" class="bcolorSecondary px-4 py-2 ms-1 colorWhite border-0 rounded-2"><i class="fa-solid fa-file"></i></a>
-                                        </div>
-                                        <sub class="fst-italic">* I prezzi mostrati nel PDF sopra allegato sono da considerarsi ad IVA esclusa per le aziende</sub>
-                                    </div>
-                                </div>
+                                <sub class="fst-italic">* I prezzi mostrati nel PDF sopra allegato sono da considerarsi ad IVA esclusa per le aziende</sub>
                             </div>
                         </div>
-                    `;
-                    carListContainer.innerHTML += carHtml; // Aggiungi il markup HTML all'elemento del DOM
-                    count++;
-                    console.log(count);
-                });
+                    </div>
+                </div>
+            `;
+            carListContainer.innerHTML += carHtml; // Add the HTML markup to the DOM
+        });
+    }
+
+    // Display all cars initially
+    displayCars(cars);
             </script>
         </div>
     </div>
