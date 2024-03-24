@@ -676,14 +676,20 @@
                 ];
                 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 
-                // Function to filter cars based on price range
+    // Function to filter cars based on price range
     function filterCars() {
-        let priceRangeInput = document.getElementById("priceRange").value;
-        let [minPrice, maxPrice] = priceRangeInput.split("-").map(Number);
+    let priceRangeInput = document.getElementById("priceRange").value;
+    let [minPrice, maxPrice] = priceRangeInput.split("-").map(Number);
 
-        let filteredCars = cars.filter(car => car.price >= minPrice && car.price <= maxPrice);
-        displayCars(filteredCars);
+    // Check if maxPrice is not defined or NaN, then set it to 10000
+    if (isNaN(maxPrice) || maxPrice === undefined || priceRangeInput.endsWith("-")) {
+        maxPrice = 10000;
     }
+
+    let filteredCars = cars.filter(car => car.price >= minPrice && car.price <= maxPrice);
+    displayCars(filteredCars);
+}
+
 
     // Function to display cars
     function displayCars(cars) {
