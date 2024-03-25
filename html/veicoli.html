@@ -49,11 +49,17 @@
             Offriamo soluzioni di mobilità su misura con una vasta flotta di veicoli di ultima generazione. Il nostro servizio clienti dedicato e tariffe competitive assicurano un viaggio senza problemi, sia che siate in viaggio per lavoro o piacere.</p> 
     </div>
 
-    <div id="veicoli" class="cards py-5">
+    <div id="veicoli" class="cards pb-5">
         <div class="container">
-            <h3>Filtra per prezzo:</h3>
-            <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-4" type="text" id="priceRange" placeholder="es: 400-800 o 300...">
-            <button class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-4" onclick="filterCars()">Filtra</button>
+            <div class="bg-warning bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
+                <h3 class="text-center">Filtra per prezzo:</h3>
+                <p class="small text-center my-0">Trova subito l'auto che cerchi attraverso il nostro rapido filtro di ricerca.</p>
+                <div class="d-md-flex text-center">
+                    <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-4 mx-1 my-3 my-md-0" type="text" id="priceRange" placeholder="es: 400-800 o 300...">
+                    <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-4 mx-1 my-3 my-md-0" type="text" id="carName" placeholder="Nome dell'auto...">
+                    <button class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-4 mx-1 mt-3 my-md-0" onclick="filterCars()">Filtra</button>
+                </div>
+            </div>
             <div id="carList"></div>
             <script>
                 // Definisci un array di oggetti, ognuno rappresenta i dati per un singolo componente
@@ -677,9 +683,11 @@
                 ];
                 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 
-    // Function to filter cars based on price range
-    function filterCars() {
+// Function to filter cars based on price range and car name
+function filterCars() {
     let priceRangeInput = document.getElementById("priceRange").value;
+    let carNameFilter = document.getElementById("carName").value.toLowerCase(); // Get the car name filter
+
     let [minPrice, maxPrice] = priceRangeInput.split("-").map(Number);
 
     // Check if maxPrice is not defined or NaN, then set it to 10000
@@ -687,9 +695,34 @@
         maxPrice = 10000;
     }
 
-    let filteredCars = cars.filter(car => car.price >= minPrice && car.price <= maxPrice);
+    let filteredCars;
+
+    if (priceRangeInput && carNameFilter) {
+        // Filter by both price range and car name
+        filteredCars = cars.filter(car => 
+            car.price >= minPrice && 
+            car.price <= maxPrice && 
+            car.name.toLowerCase().includes(carNameFilter)
+        );
+    } else if (priceRangeInput) {
+        // Filter only by price range
+        filteredCars = cars.filter(car => 
+            car.price >= minPrice && 
+            car.price <= maxPrice
+        );
+    } else if (carNameFilter) {
+        // Filter only by car name
+        filteredCars = cars.filter(car => 
+            car.name.toLowerCase().includes(carNameFilter)
+        );
+    } else {
+        // If both filters are empty, display all cars
+        filteredCars = cars;
+    }
+
     displayCars(filteredCars);
 }
+
 
 
     // Function to display cars
