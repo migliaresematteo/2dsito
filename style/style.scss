@@ -16,6 +16,9 @@ $black: #191919;
 .card-footer {
     background-color: #272f9f2b;
 }
+input::-webkit-input-placeholder {
+    color: rgb(32, 32, 32);
+}
 
 * {
     box-sizing: border-box;
