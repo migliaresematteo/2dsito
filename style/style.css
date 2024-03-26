@@ -19,6 +19,10 @@ input::-webkit-input-placeholder {
   color: rgb(32, 32, 32);
 }
 
+.fs-prices {
+  font-size: 1.75rem !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

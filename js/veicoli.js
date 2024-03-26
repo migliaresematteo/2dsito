@@ -664,7 +664,7 @@ function displayCars(cars) {
                         <div>
                             <h1><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
                             <h6>${car.description}</h6>
-                            <p class="lead m-0"><span class="badge bg-success">${car.price} € / mese</span></p><sub class="text-dark"> IVA Inclusa</sub>
+                            <p class="fs-prices m-0"><span class="badge bg-success">${car.price} € / mese</span></p><sub class="text-dark"> IVA Inclusa</sub>
                             <p class="fst-italic my-3">Dettagli della miglior offerta disponibile:</p>
                             <p class="lead"><span class="badge bg-success"><i class="fa-solid fa-clock"></i> 60 Mesi</span><br><span class="badge bg-success"><i class="fa-solid fa-road"></i> 20.000 chilometri annui</span></p>
                             <div class="d-flex">
