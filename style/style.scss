@@ -22,6 +22,22 @@ input::-webkit-input-placeholder {
 .fs-prices {
     font-size: 1.75rem !important;
 }
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Width of the square */
+    height: 20px; /* Height of the square */
+    border: 2px solid $secondary-clr; /* Border color */
+    outline: none;
+    transition: all 0.3s ease;
+    &:checked {
+      background-color: $secondary-clr; /* Color when checked */
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 * {
     box-sizing: border-box;

@@ -628,21 +628,30 @@ function filterCars() {
     let filteredCars;
 
     if (priceRangeInput && carNameFilter) {
-        filteredCars = cars.filter(car => 
-            car.price >= minPrice && 
-            car.price <= maxPrice && 
+        filteredCars = cars.filter(car =>
+            car.price >= minPrice &&
+            car.price <= maxPrice &&
             car.name.toLowerCase().includes(carNameFilter)
         );
     } else if (priceRangeInput) {
-        filteredCars = cars.filter(car => 
-            car.price >= minPrice && 
+        filteredCars = cars.filter(car =>
+            car.price >= minPrice &&
             car.price <= maxPrice
         );
     } else if (carNameFilter) {
-        filteredCars = cars.filter(car => 
+        filteredCars = cars.filter(car =>
             car.name.toLowerCase().includes(carNameFilter)
         );
-    } else filteredCars = cars;
+    } else {
+        filteredCars = cars;
+    }
+
+    const sortBy = document.querySelector('input[name="sort"]:checked').value;
+    if (sortBy === "ascending") {
+        filteredCars.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "descending") {
+        filteredCars.sort((a, b) => b.price - a.price);
+    }
 
     displayCars(filteredCars);
 }
@@ -680,4 +689,10 @@ function displayCars(cars) {
         carListContainer.innerHTML += carHtml;
     });
 }
+
 displayCars(cars);
+
+// Add event listeners for radio buttons to trigger sorting
+document.querySelectorAll('input[name="sort"]').forEach((elem) => {
+    elem.addEventListener("change", filterCars);
+});
