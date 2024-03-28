@@ -18,7 +18,7 @@ let cars = [
     {
         name: "CLASSE A AMG 45s",
         imageSrc: "../assets/classea/Screenshot 2024-03-28 164954.png",
-        mensile: "1.800 € / 48 mesi",
+        mensile: "1.500 € / 48 mesi",
         acconto: "10.000",
         riscatto: "40.000",
         pdfLink: "../assets/classea/CLASSE A AMG 45s.pdf"
