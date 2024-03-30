@@ -47,10 +47,6 @@ function displayCars(cars) {
                     </div>
                 </div>
             </div>
-            <div class="card-footer rounded-2 mt-3 p-3 d-flex justify-content-center flex-column">
-                <div class="badge rounded-pill bg-warning bg-opacity-50 mb-2 text-dark w-max"><i class="fa-solid fa-triangle-exclamation"></i> Attenzione</div>
-                <p class="fst-italic m-0 small">Auto venduta in no-scoring, non è necessario avere storicità finanziaria</p>
-            </div>
         </div>
         `;
         carListContainer.innerHTML += carHtml;
