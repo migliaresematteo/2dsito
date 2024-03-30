@@ -24,6 +24,9 @@ let cars = [
         pdfLink: "../assets/classea/CLASSE A AMG 45s.pdf"
     },
 ]
+
+cars.sort((a, b) => parseFloat(a.mensile) - parseFloat(b.mensile));
+
 function displayCars(cars) {
     let carListContainer = document.getElementById("noscoringlist");
     carListContainer.innerHTML = "";

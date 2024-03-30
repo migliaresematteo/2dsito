@@ -67,10 +67,39 @@
             viaggio per lavoro o piacere.</p>
     </div>
     <div class="container">
-        <div class="bg-success bg-opacity-25 rounded-2 mt-3 p-3 d-flex justify-content-center flex-column mb-3">
+        <div class="bg-success bg-opacity-25 rounded-4 mt-3 p-3 d-flex justify-content-center flex-column mb-3">
             <div class="badge rounded-pill bg-light bg-opacity-50 mb-2 text-dark w-max"><i class="fa-solid fa-circle-info"></i> Attenzione</div>
             <p class="fst-italic m-0 small">Con noi è possibile eseguire un finanziamento con tasso agevolato!</p>
         </div>
+        <div
+                class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0 mb-3">
+                <h3 class="text-center"><i class="fa-solid fa-filter"></i> Filtra per prezzo:</h3>
+                <p class="small text-center mb-0 mb-md-3">Trova subito l'auto che cerchi attraverso il nostro rapido
+                    filtro di ricerca.</p>
+                <div class="d-md-flex flex-column text-center">
+                    <div>
+                        <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-2 mx-1 my-3 my-md-0"
+                            type="text" id="priceRange" placeholder="es: 400-800 o 300...">
+                        <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-2 mx-1 my-3 my-md-0"
+                            type="text" id="carName" placeholder="Nome dell'auto...">
+                        <button class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 mx-1 mt-3 my-md-0"
+                            onclick="filterCars()"><i class="fa-solid fa-wand-magic-sparkles me-2"></i> Filtra</button>
+                    </div>
+                    <div class="mt-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sort" id="ascending" value="ascending"
+                                checked>
+                            <label class="form-check-label" for="ascending">Prezzo crescente</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sort" id="descending" value="descending">
+                            <label class="form-check-label" for="descending">Prezzo decrescente</label>
+                        </div>
+                    </div>
+                </div>
+                <p class="small text-center fst-italic mt-4 mt-md-3">Non è necessario inserire tutti i parametri di
+                    ricerca!</p>
+            </div>
         <div id="privatilist"></div>
         <script src="../js/privati.js"></script>
     </div>    

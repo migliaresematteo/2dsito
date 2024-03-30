@@ -117,6 +117,43 @@ let cars = [
 ];
 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 
+function filterCars() {
+    let priceRangeInput = document.getElementById("priceRange").value;
+    let carNameFilter = document.getElementById("carName").value.toLowerCase();
+    let [minPrice, maxPrice] = priceRangeInput.split("-").map(Number);
+    if (isNaN(maxPrice) || maxPrice === undefined || priceRangeInput.endsWith("-")) maxPrice = 100000;
+
+    let filteredCars;
+
+    if (priceRangeInput && carNameFilter) {
+        filteredCars = cars.filter(car =>
+            car.price >= minPrice &&
+            car.price <= maxPrice &&
+            car.name.toLowerCase().includes(carNameFilter)
+        );
+    } else if (priceRangeInput) {
+        filteredCars = cars.filter(car =>
+            car.price >= minPrice &&
+            car.price <= maxPrice
+        );
+    } else if (carNameFilter) {
+        filteredCars = cars.filter(car =>
+            car.name.toLowerCase().includes(carNameFilter)
+        );
+    } else {
+        filteredCars = cars;
+    }
+
+    const sortBy = document.querySelector('input[name="sort"]:checked').value;
+    if (sortBy === "ascending") {
+        filteredCars.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "descending") {
+        filteredCars.sort((a, b) => b.price - a.price);
+    }
+
+    displayCars(filteredCars);
+}
+
 function displayCars(cars) {
     let carListContainer = document.getElementById("privatilist");
     carListContainer.innerHTML = "";
