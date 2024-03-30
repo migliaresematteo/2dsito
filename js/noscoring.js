@@ -30,9 +30,11 @@ function displayCars(cars) {
 
     cars.forEach(function(car) {
         let carHtml = `
-        <div class="row flex-lg-row-reverse align-items-center mx-1 mt-3">
+        <div class="row flex-lg-row-reverse align-items-center mx-1 mb-5 mt-3">
             <div class="col-lg-6 px-0">
-                <img loading="lazy" class="img-fluid rounded-2" src="${car.imageSrc}" alt="CarImage">
+                <div class="lc-block car-image-container">
+                    <img loading="lazy" class="img-fluid rounded-4" src="${car.imageSrc}" alt="CarImage">
+                </div>
             </div>
             <div class="col-lg-6 px-0">
                 <div class="d-flex flex-column justify-content-between">
