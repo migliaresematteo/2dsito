@@ -36,45 +36,86 @@ let cars = [
         description: "Xdrive18d Msport auto",
         price: "35.900",
     },
+    {
+        name: "Volkswagen | T-Roc",
+        imageSrc: "../assets/gigli/troc.jpg",
+        description: "Life C.Lega17 Camera AppleCarPlay FullLED",
+        price: "31.900",
+    },
+    {
+        name: "Land Rover | Range Rover Evoque II",
+        imageSrc: "../assets/gigli/landro.webp",
+        description: "2.0 163CV MhEV R-Dynamic S",
+        price: "44.900",
+    },
+    {
+        name: "Volvo | XC60 II",
+        imageSrc: "../assets/gigli/xc60.webp",
+        description: "XC60 2.0 B4 R-design geartronic",
+        price: "45.900",
+    },
+    {
+        name: "Tesla | Model Y",
+        imageSrc: "../assets/gigli/tesla.jpg",
+        description: "Long Range Dual Motor awd",
+        price: "46.700",
+    },
+    {
+        name: "Volkswagen | Tiguan II",
+        imageSrc: "../assets/gigli/tiguan.jpg",
+        description: "2.0 tdi Life 150cv dsg",
+        price: "46.800",
+    },
+    {
+        name: "Volkswagen | Passat VIII",
+        imageSrc: "../assets/gigli/passat.jpg",
+        description: "2.0 tdi Business 150cv dsg",
+        price: "46.900",
+    },
+    {
+        name: "Mercedes | Classe C - S/W 206",
+        imageSrc: "../assets/gigli/classec.webp",
+        description: "220 d mhev Premium Pro auto",
+        price: "47.500",
+    },
+    {
+        name: "BMW | Serie 3 G20-21-80-81",
+        imageSrc: "../assets/gigli/serie3.jpg",
+        description: "320d mhev 48V Msport xdrive auto",
+        price: "50.900",
+    },
+    {
+        name: "BMW | X4 G02-F98",
+        imageSrc: "../assets/gigli/x4.jpg",
+        description: "Xdrive20d mhev 48V auto",
+        price: "56.400",
+    },
+    {
+        name: "Polestar | 2",
+        imageSrc: "../assets/gigli/pole.jpg",
+        description: "Long Range Dual Motor",
+        price: "56.900",
+    },
+    {
+        name: "Jaguar | E-Pace",
+        imageSrc: "../assets/gigli/f.webp",
+        description: "2.0 D163 R-Dynamic SE awd auto",
+        price: "56.600",
+    },
+    {
+        name: "BMW | X5 G05-F95",
+        imageSrc: "../assets/gigli/x5.jpg",
+        description: "XDrive 40d ,hev 48V M-Sport auto TETTO LED CAMERA Cerchi 21 Clima3",
+        price: "64.400",
+    },
+    {
+        name: "Jaguar | F-Pace",
+        imageSrc: "../assets/gigli/fpace.jpg",
+        description: "2.0 D204 R-Dynamic SE awd auto",
+        price: "69.700",
+    },
 ];
 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-
-function filterCars() {
-    let priceRangeInput = document.getElementById("priceRange").value;
-    let carNameFilter = document.getElementById("carName").value.toLowerCase();
-    let [minPrice, maxPrice] = priceRangeInput.split("-").map(Number);
-    if (isNaN(maxPrice) || maxPrice === undefined || priceRangeInput.endsWith("-")) maxPrice = 10000;
-
-    let filteredCars;
-
-    if (priceRangeInput && carNameFilter) {
-        filteredCars = cars.filter(car =>
-            car.price >= minPrice &&
-            car.price <= maxPrice &&
-            car.name.toLowerCase().includes(carNameFilter)
-        );
-    } else if (priceRangeInput) {
-        filteredCars = cars.filter(car =>
-            car.price >= minPrice &&
-            car.price <= maxPrice
-        );
-    } else if (carNameFilter) {
-        filteredCars = cars.filter(car =>
-            car.name.toLowerCase().includes(carNameFilter)
-        );
-    } else {
-        filteredCars = cars;
-    }
-
-    const sortBy = document.querySelector('input[name="sort"]:checked').value;
-    if (sortBy === "ascending") {
-        filteredCars.sort((a, b) => a.price - b.price);
-    } else if (sortBy === "descending") {
-        filteredCars.sort((a, b) => b.price - a.price);
-    }
-
-    displayCars(filteredCars);
-}
 
 function displayCars(cars) {
     let carListContainer = document.getElementById("privatilist");
