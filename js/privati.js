@@ -123,13 +123,13 @@ function displayCars(cars) {
 
     cars.forEach(function(car) {
         let carHtml = `
-            <div class="row flex-lg-row-reverse align-items-center mb-5">
-                <div class="col-lg-5">
+            <div class="row flex-lg-row-reverse align-items-center mb-5 mx-1">
+                <div class="col-lg-6 px-0">
                     <div class="lc-block car-image-container">
                         <img loading="lazy" class="img-fluid rounded-4" src="${car.imageSrc}" alt="CarImage">
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-6 px-0">
                     <div class="lc-block">
                         <div>
                             <h1 class="mt-3 mt-md-0><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
@@ -139,6 +139,10 @@ function displayCars(cars) {
                                 <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Finalizza</a>                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="bg-success bg-opacity-25 rounded-2 mt-3 p-3 d-flex justify-content-center flex-column">
+                    <div class="badge rounded-pill bg-light bg-opacity-50 mb-2 text-dark w-max"><i class="fa-solid fa-circle-info"></i> Attenzione</div>
+                    <p class="fst-italic m-0 small">Con noi è possibile eseguire un finanziamento con tasso agevolato!</p>
                 </div>
             </div>
         `;
