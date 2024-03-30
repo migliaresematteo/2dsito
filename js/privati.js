@@ -140,10 +140,6 @@ function displayCars(cars) {
                         </div>
                     </div>
                 </div>
-                <div class="bg-success bg-opacity-25 rounded-2 mt-3 p-3 d-flex justify-content-center flex-column">
-                    <div class="badge rounded-pill bg-light bg-opacity-50 mb-2 text-dark w-max"><i class="fa-solid fa-circle-info"></i> Attenzione</div>
-                    <p class="fst-italic m-0 small">Con noi è possibile eseguire un finanziamento con tasso agevolato!</p>
-                </div>
             </div>
         `;
         carListContainer.innerHTML += carHtml;
