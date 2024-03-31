@@ -15,6 +15,10 @@
   background-color: rgba(39, 47, 159, 0.168627451);
 }
 
+.card-footer2 {
+  background-color: rgba(73, 39, 159, 0.168627451);
+}
+
 input::-webkit-input-placeholder {
   color: rgb(32, 32, 32);
 }
