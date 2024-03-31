@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>2D Services - Auto Noleggio</title>
+    <title>2D Services - Vendita auto</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
 
     <header class="d-flex align-items-center h-100">
         <div class="container">
-            <h1 data-aos="fade-right" class="display-1 fw-bold colorWhite">Noleggio & vendita veicoli</h1>
+            <h1 data-aos="fade-right" class="display-1 fw-bold colorWhite">Vendita auto</h1>
         </div>
         <img class="header-wave" src="../assets/wave.png" alt="Wave">
     </header>
@@ -66,37 +66,13 @@
             servizio clienti dedicato e tariffe competitive assicurano un viaggio senza problemi, sia che siate in
             viaggio per lavoro o piacere.</p>
     </div>
-
-    <div id="veicoli" class="cards pb-5">
-        <div class="container">
-            <div class="row mb-4 mt-4">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <div
-                        class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
-                        <h3 class="text-center"><i class="fa-solid fa-square-xmark"></i> Noleggi no-scoring</h3>
-                        <div class="badge rounded-pill bg-warning bg-opacity-50 mb-2 text-dark"><i class="fa-solid fa-triangle-exclamation"></i> Solo 3 rimasti</div>
-                        <p class="small text-center mb-0 mb-md-3 px-3">Trova subito l'auto che cerchi attraverso il nostro
-                            rapido filtro di ricerca.</p>
-                        <a href="noscoring.html"
-                            class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 w-max">Scopri di più <i
-                                class="fa-solid fa-right-long ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div
-                        class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
-                        <h3 class="text-center"><i class="fa-solid fa-key"></i> Vendita veicoli privati</h3>
-                        <div class="badge rounded-pill bg-warning bg-opacity-50 mb-2 text-dark"><i class="fa-solid fa-triangle-exclamation"></i> Solo 19 rimasti</div>
-                        <p class="small text-center mb-0 mb-md-3 px-3">Trova subito l'auto che cerchi attraverso il nostro
-                            rapido filtro di ricerca.</p>
-                        <a href="privati.html"
-                            class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 w-max">Scopri di più <i
-                                class="fa-solid fa-right-long ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
+    <div class="container">
+        <div class="bg-success bg-opacity-25 rounded-4 mt-3 p-3 d-flex justify-content-center flex-column mb-3">
+            <div class="badge rounded-pill bg-light bg-opacity-50 mb-2 text-dark w-max"><i class="fa-solid fa-circle-info"></i> Attenzione</div>
+            <p class="fst-italic m-0 small">Con noi è possibile eseguire un finanziamento con tasso agevolato!</p>
+        </div>
+        <div
+                class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0 mb-3">
                 <h3 class="text-center"><i class="fa-solid fa-filter"></i> Filtra per prezzo:</h3>
                 <p class="small text-center mb-0 mb-md-3">Trova subito l'auto che cerchi attraverso il nostro rapido
                     filtro di ricerca.</p>
@@ -124,10 +100,9 @@
                 <p class="small text-center fst-italic mt-4 mt-md-3">Non è necessario inserire tutti i parametri di
                     ricerca!</p>
             </div>
-            <div id="carList"></div>
-            <script src="../js/veicoli.js"></script>
-        </div>
-    </div>
+        <div id="privatilist"></div>
+        <script src="../js/privatip.js"></script>
+    </div>    
     <div id="footerContainer"></div>
     <div data-tf-live="01HRCQQ8TJ8FNJFK0XK2M797MX"></div>
     <script src="//embed.typeform.com/next/embed.js"></script>
