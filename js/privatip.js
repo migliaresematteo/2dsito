@@ -195,7 +195,7 @@ function displayCars(cars) {
                         <div>
                             <h1 class="mt-3 mt-md-0><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
                             <h6>${car.description}</h6>
-                            <p class="fs-prices m-0"><span class="badge bg-success">${car.price} €</span></p><sub class="text-dark"> IVA Inclusa</sub>
+                            <p class="fs-prices m-0"><span class="badge bg-success">${car.price} € / mese</span></p><sub class="text-dark"> IVA Inclusa</sub>
                             <div class="d-flex">
                                 <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Finalizza</a>                            </div>
                         </div>

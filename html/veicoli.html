@@ -70,6 +70,8 @@
     <div id="veicoli" class="cards pb-5">
         <div class="container">
             <div class="row mb-4 mt-4">
+                <h2 class="text-center">Noleggio veicoli</h2>
+                <p class="text-center lead mb-4">Noleggia il veicolo adatto alle tue esigenze attraverso contratti di durata variabile usufrendo dei nostri prezzi imbattibili!</p>
                 <div class="col-md-6 mb-4 mb-md-0">
                     <div
                         class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
@@ -85,7 +87,36 @@
                 <div class="col-md-6">
                     <div
                         class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
-                        <h3 class="text-center"><i class="fa-solid fa-key"></i> Vendita veicoli privati</h3>
+                        <h3 class="text-center"><i class="fa-solid fa-key"></i> Noleggio veicoli</h3>
+                        <div class="badge rounded-pill bg-info bg-opacity-25 mb-2 text-dark"><i class="fa-solid fa-car"></i> 23 modelli</div>
+                        <p class="small text-center mb-0 mb-md-3 px-3">Trova subito l'auto che cerchi attraverso il nostro
+                            rapido filtro di ricerca.</p>
+                        <a href="privatip.html"
+                            class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 w-max">Scopri di più <i
+                                class="fa-solid fa-right-long ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div
+                    class="col-md-12 card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0 mt-4">
+                    <h3 class="text-center"><i class="fa-solid fa-address-card"></i> Noleggio veicoli</h3>
+                    <div class="d-flex">
+                        <div class="badge rounded-pill bg-info bg-opacity-25 mb-2 text-dark"><i class="fa-solid fa-car"></i> 88 modelli</div>
+                    <div class="badge rounded-pill bg-danger bg-opacity-75 ms-1 mb-2 text-dark"><i class="fa-solid fa-triangle-exclamation"></i> P.IVA richiesta</div>
+                    </div>
+                    <p class="small text-center mb-0 mb-md-3 px-3">Trova subito l'auto che cerchi attraverso il nostro
+                        rapido filtro di ricerca.</p>
+                    <a href="noleggipiva.html"
+                        class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 w-max">Scopri di più <i
+                        class="fa-solid fa-right-long ms-2"></i></a>
+                </div>
+                </div>
+                <h2 class="text-center mt-4">Vendita veicoli</h2>
+                <p class="text-center lead mb-4">Acquista il veicolo dei tuoi sogni approfittando dei nostri prezzi competitivi!</p>
+                <div>
+                    <div
+                        class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
+                        <h3 class="text-center"><i class="fa-solid fa-key"></i> Vendita veicoli</h3>
                         <div class="badge rounded-pill bg-warning bg-opacity-50 mb-2 text-dark"><i class="fa-solid fa-triangle-exclamation"></i> Solo 19 rimasti</div>
                         <p class="small text-center mb-0 mb-md-3 px-3">Trova subito l'auto che cerchi attraverso il nostro
                             rapido filtro di ricerca.</p>
@@ -95,37 +126,6 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="card-footer bg-opacity-25 d-flex flex-column justify-content-center align-items-center rounded-4 py-3 px-3 px-md-0">
-                <h3 class="text-center"><i class="fa-solid fa-filter"></i> Filtra per prezzo:</h3>
-                <p class="small text-center mb-0 mb-md-3">Trova subito l'auto che cerchi attraverso il nostro rapido
-                    filtro di ricerca.</p>
-                <div class="d-md-flex flex-column text-center">
-                    <div>
-                        <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-2 mx-1 my-3 my-md-0"
-                            type="text" id="priceRange" placeholder="es: 400-1.200 o 300...">
-                        <input class="bg-black bg-opacity-25 px-4 py-2 colorWhite border-0 rounded-2 mx-1 my-3 my-md-0"
-                            type="text" id="carName" placeholder="Nome dell'auto...">
-                        <button class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 mx-1 mt-3 my-md-0"
-                            onclick="filterCars()"><i class="fa-solid fa-wand-magic-sparkles me-2"></i> Filtra</button>
-                    </div>
-                    <div class="mt-4">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sort" id="ascending" value="ascending"
-                                checked>
-                            <label class="form-check-label" for="ascending">Prezzo crescente</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sort" id="descending" value="descending">
-                            <label class="form-check-label" for="descending">Prezzo decrescente</label>
-                        </div>
-                    </div>
-                </div>
-                <p class="small text-center fst-italic mt-4 mt-md-3">Non è necessario inserire tutti i parametri di
-                    ricerca!</p>
-            </div>
-            <div id="carList"></div>
-            <script src="../js/veicoli.js"></script>
         </div>
     </div>
     <div id="footerContainer"></div>
