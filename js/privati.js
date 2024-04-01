@@ -169,7 +169,7 @@ function displayCars(cars) {
                 <div class="col-lg-6 px-0">
                     <div class="lc-block">
                         <div>
-                            <h1 class="mt-3 mt-md-0><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
+                            <h1 class="mt-3 mt-md-0"><i class="fa-solid fa-car-rear"></i> ${car.name}</h1>
                             <h6>${car.description}</h6>
                             <p class="fs-prices m-0"><span class="badge bg-success">${car.price} €</span></p><sub class="text-dark"> IVA Inclusa</sub>
                             <div class="d-flex">

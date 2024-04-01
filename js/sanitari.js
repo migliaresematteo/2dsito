@@ -82,7 +82,7 @@ function displaySanitari(sanitari) {
                 <div class="col-lg-6 px-0 pe-md-4">
                     <div class="lc-block">
                         <div>
-                            <h1 class="mt-3 mt-md-0><i class="fa-solid fa-car-rear"></i> ${sanitario.name}</h1>
+                            <h1 class="mt-3 mt-md-0"><i class="fa-solid fa-user-doctor"></i> ${sanitario.name}</h1>
                             <h6>${sanitario.description}</h6>
                             <div class="d-flex">
                                 <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Contatta</a>                            </div>
