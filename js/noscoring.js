@@ -47,7 +47,7 @@ function displayCars(cars) {
                     <p class="small my-1">Acconto pari a: ${car.acconto} €</p>
                     <p class="small my-1 mb-2">Riscatto pari a: ${car.riscatto} €</p>
                     <div class="d-flex">
-                        <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Finalizza</a>
+                        <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>
                         <a target="_blank" href="${car.pdfLink}" class="bcolorSecondary px-4 py-2 ms-1 colorWhite border-0 rounded-2"><i class="fa-solid fa-image me-1"></i> Galleria</a>
                     </div>
                 </div>

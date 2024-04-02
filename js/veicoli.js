@@ -677,7 +677,7 @@ function displayCars(cars) {
                             <p class="fst-italic my-3">Dettagli della miglior offerta disponibile:</p>
                             <p class="lead"><span class="badge bg-success"><i class="fa-solid fa-clock"></i> 60 Mesi</span><br><span class="badge bg-success"><i class="fa-solid fa-road"></i> 20.000 chilometri annui</span></p>
                             <div class="d-flex">
-                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Finalizza</a>
+                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>
                                 <a target="_blank" href="${car.pdfLink}" class="bcolorSecondary px-4 py-2 ms-1 colorWhite border-0 rounded-2"><i class="fa-solid fa-file me-1"></i> PDF</a>
                             </div>
                             <sub class="text-dark">* I prezzi mostrati nel PDF sopra allegato sono da considerarsi ad IVA esclusa per le aziende</sub>
