@@ -356,7 +356,7 @@ function displayCars(cars) {
                                 </tbody>
                             </table>
                             <div class="d-flex">
-                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>                            </div>
+                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2 bg-success text-light fw-bold"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>                            </div>
                         </div>
                     </div>
                 </div>
