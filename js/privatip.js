@@ -11,6 +11,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Fiat Panda",
@@ -23,6 +24,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Renault Clio",
@@ -35,6 +37,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Renault Twingo",
@@ -47,6 +50,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Citroen C3",
@@ -59,6 +63,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Seat Ibiza",
@@ -71,6 +76,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Ford Ecosport",
@@ -83,6 +89,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Fiat 500X",
@@ -95,6 +102,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Nissan Micra",
@@ -107,6 +115,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Peugeot 208",
@@ -119,6 +128,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Jeep Avenger",
@@ -131,6 +141,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Opel Mokka",
@@ -143,6 +154,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Renault Captur",
@@ -155,6 +167,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "BMW Serie 1",
@@ -167,6 +180,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Ford Fiesta",
@@ -179,6 +193,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Audi A3",
@@ -191,6 +206,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Nissan Juke",
@@ -203,6 +219,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Peugeot 2008",
@@ -215,6 +232,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Volkswagen T-Cross",
@@ -227,6 +245,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Alfa Romeo Tonale",
@@ -239,6 +258,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "BMW Serie 3 Touring",
@@ -251,6 +271,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
     {
         name: "Tesla Model 3",
@@ -263,6 +284,7 @@ let cars = [
         durata2: "60 mesi",
         kminc: "100.000",
         kminc2: "40.000",
+        id: ""
     },
 ];
 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
@@ -307,10 +329,11 @@ function filterCars() {
 function displayCars(cars) {
     let carListContainer = document.getElementById("privatilist");
     carListContainer.innerHTML = "";
-
+    let currentId = 1;
     cars.forEach(function(car) {
+        if(car.id=="") car.id = currentId++;
         let carHtml = `
-            <div class="row flex-lg-row-reverse align-items-center mb-5 mx-1">
+            <div id="${car.id}" class="row flex-lg-row-reverse align-items-center mb-5 mx-1">
                 <div class="col-lg-8 px-0">
                     <div class="lc-block car-image-container">
                         <img loading="lazy" class="img-fluid rounded-4" src="${car.imageSrc}" alt="CarImage">
@@ -356,7 +379,8 @@ function displayCars(cars) {
                                 </tbody>
                             </table>
                             <div class="d-flex">
-                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2 bg-success text-light fw-bold"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>                            </div>
+                            <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 colorWhite border-0 rounded-2 bg-success text-light fw-bold w-max"><i class="fa-brands fa-whatsapp me-1"></i>Personalizza</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -364,6 +388,17 @@ function displayCars(cars) {
             <hr>
         `;
         carListContainer.innerHTML += carHtml;
+    });
+}
+
+function copyLink(id) {
+    let link = window.location.href + '#' + id;
+    navigator.clipboard.writeText(link).then(function() {
+        console.log('Link copiato negli appunti');
+        alert('Link copiato negli appunti');
+    }, function(err) {
+        console.error('Unable to copy link to clipboard', err);
+        alert('Impossibile copiare il link negli appunti');
     });
 }
 

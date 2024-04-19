@@ -21,7 +21,13 @@ function displayFooter() {
                     <a target="_blank" class="text-dark d-block my-0 mb-1" href="https://www.facebook.com/profile.php?id=61552927612401"><i class="fa-brands fa-facebook"></i> Facebook: 2D Services</a>
                     <a target="_blank" class="text-dark d-block my-0 mb-1" href="https://www.instagram.com/2d_services.srl/"><i class="fa-brands fa-instagram"></i> Instagram: 2d_services.srl</a>
                 </div>
-                </div>   
+                </div>
+                <div class="rounded-4 card-footer p-4 mb-3">
+                    <p><i class="fa-solid fa-circle-info"></i> Scarica la nostra applicazione gratuitamente seguendo il link qui sotto!</p>
+                    <a target="_blank" href="https://www.cittacoupon.it/scarica-app/2d-services"
+                        class="bcolorSecondary px-4 py-2 colorWhite border-0 rounded-2 w-max">Scarica <i
+                        class="fa-solid fa-right-long ms-2"></i></a>  
+                </div>
             </div>
             <div class="bg-dark text-center p-3">
                 <p class="text-light my-0 mb-2 fw-bold">Sviluppato da:</p>

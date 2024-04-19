@@ -17,7 +17,8 @@ let cars = [
         pp: "5/5", 
         potenza: "88kW / 120 Cv",
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Volkswagen | Taigo",
@@ -36,7 +37,8 @@ let cars = [
         pp: "5/5", 
         potenza: "70kW / 95 Cv",
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Porsche | 911 IV Carrera 996",
@@ -55,7 +57,8 @@ let cars = [
         pp: "2/2", 
         potenza: "235kW / 320Cv", 
         trazione: "Posteriore", 
-        emissioni: "Euro 3"
+        emissioni: "Euro 3",
+        id: ""
     },
     {
         name: "Volkswagen | Golf VIII",
@@ -74,7 +77,8 @@ let cars = [
         pp: "5/5", 
         potenza: "81kW / 110Cv", 
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "BMW | X2 F39",
@@ -93,7 +97,8 @@ let cars = [
         pp: "5/5", 
         potenza: "110kW / 150Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6"
+        emissioni: "Euro 6",
+        id: ""
     },
     {
         name: "Volkswagen | T-Roc",
@@ -112,7 +117,8 @@ let cars = [
         pp: "5/5", 
         potenza: "85kW / 115Cv", 
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Land Rover | Range Rover Evoque II",
@@ -131,7 +137,8 @@ let cars = [
         pp: "5/5", 
         potenza: "120kW / 163 Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Volvo | XC60 II",
@@ -150,7 +157,8 @@ let cars = [
         pp: "5/5", 
         potenza: "145kW / 197Cv", 
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Tesla | Model Y",
@@ -169,7 +177,8 @@ let cars = [
         pp: "5/5", 
         potenza: "324kW / 440Cv", 
         trazione: "Integrale", 
-        emissioni: "/"
+        emissioni: "/",
+        id: ""
     },
     {
         name: "Volkswagen | Tiguan II",
@@ -188,7 +197,8 @@ let cars = [
         pp: "5/5", 
         potenza: "110kW / 150Cv", 
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Volkswagen | Passat VIII",
@@ -207,7 +217,8 @@ let cars = [
         pp: "5/5", 
         potenza: "110kW / 150Cv", 
         trazione: "Anteriore", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Mercedes | Classe C - S/W 206",
@@ -226,7 +237,8 @@ let cars = [
         pp: "5/5", 
         potenza: "147kW / 200Cv", 
         trazione: "Posteriore", 
-        emissioni: "Euro 6"
+        emissioni: "Euro 6",
+        id: ""
     },
     {
         name: "BMW | Serie 3 G20-21-80-81",
@@ -245,7 +257,8 @@ let cars = [
         pp: "5/5", 
         potenza: "140kW / 190Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6"
+        emissioni: "Euro 6",
+        id: ""
     },
     {
         name: "BMW | X4 G02-F98",
@@ -264,7 +277,8 @@ let cars = [
         pp: "5/5", 
         potenza: "140kW / 190Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6"
+        emissioni: "Euro 6",
+        id: ""
     },
     {
         name: "Polestar | 2",
@@ -283,7 +297,8 @@ let cars = [
         pp: "4/5", 
         potenza: "300kW / 408Cv", 
         trazione: "Integrale elettronica", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     },
     {
         name: "Jaguar | E-Pace",
@@ -302,7 +317,8 @@ let cars = [
         pp: "5/5", 
         potenza: "120kW / 163Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6"
+        emissioni: "Euro 6",
+        id: ""
     },
     {
         name: "BMW | X5 G05-F95",
@@ -321,7 +337,8 @@ let cars = [
         pp: "5/5", 
         potenza: "250kW / 340Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6"
+        emissioni: "Euro 6",
+        id: ""
     },
     {
         name: "Jaguar | F-Pace",
@@ -340,14 +357,11 @@ let cars = [
         pp: "5/5", 
         potenza: "150kW / 204Cv", 
         trazione: "Integrale", 
-        emissioni: "Euro 6D"
+        emissioni: "Euro 6D",
+        id: ""
     }
 ];
 cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-
-cars.forEach((car, index) => {
-    car.id = index + 1; // Aggiungi un identificatore univoco per ciascuna macchina
-});
 
 function filterCars() {
     let priceRangeInput = document.getElementById("priceRange").value;
@@ -389,10 +403,11 @@ function filterCars() {
 function displayCars(cars) {
     let carListContainer = document.getElementById("privatilist");
     carListContainer.innerHTML = "";
-
+    let currentId = 1;
     cars.forEach(function(car) {
+        if(car.id=="") car.id = currentId++;
         let carHtml = `
-            <div class="row flex-lg-row-reverse align-items-center mb-5 mx-1">
+            <div id="car${car.id}" class="row flex-lg-row-reverse align-items-center mb-5 mx-1">
                 <div class="col-lg-6 px-0">
                     <div class="lc-block car-image-container">
                         <img loading="lazy" class="img-fluid rounded-4" src="${car.imageSrc}" alt="CarImage">
@@ -405,7 +420,8 @@ function displayCars(cars) {
                             <h6>${car.description}</h6>
                             <p class="fs-prices m-0"><span class="badge bg-success">${car.price} €</span></p><sub class="text-dark"> IVA Inclusa</sub>
                             <div class="d-flex">
-                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2 bg-success text-light fw-bold"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>                            </div>
+                                <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2 bg-success text-light fw-bold"><i class="fa-brands fa-whatsapp me-1"></i> Personalizza</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -484,6 +500,17 @@ function displayCars(cars) {
             <hr class="mb-5">
         `;
     carListContainer.innerHTML += carHtml;
+    });
+}
+
+function copyLink(id) {
+    let link = window.location.href + '#' + id;
+    navigator.clipboard.writeText(link).then(function() {
+        console.log('Link copiato negli appunti');
+        alert('Link copiato negli appunti');
+    }, function(err) {
+        console.error('Unable to copy link to clipboard', err);
+        alert('Impossibile copiare il link negli appunti');
     });
 }
 
