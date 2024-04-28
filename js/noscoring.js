@@ -54,7 +54,6 @@ function displayCars(cars) {
                     <a href="https://wa.me/message/RI6FQG2DAJJHB1" class="bcolorSecondary px-4 py-2 me-2 mt-2 colorWhite border-0 rounded-2 bg-success text-light fw-bold w-max"><i class="fa-brands fa-whatsapp me-1"></i>Personalizza</a>
                         <a target="_blank" href="${car.pdfLink}" class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2"><i class="fa-solid fa-image"></i></a>
                         <div class="bcolorSecondary px-4 py-2 me-1 mt-2 colorWhite border-0 rounded-2 text-decoration-none" data-tf-live="01HVVZAHQVZD1916CXK3G96RMB"></div>
-                        <script src="//embed.typeform.com/next/embed.js"></script>
                     </div>
                 </div>
             </div>
